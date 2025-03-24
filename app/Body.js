@@ -1,21 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Text } from 'react-native';
 import React from 'react';
-import Body from './Body';
 
-export default class App extends React.Component {
-  body: Body;
+export default class Body extends React.Component {
 
-  constructor(props: {}){
+  constructor(props){
     super(props);
-    this.body = new Body();
-    this.body.nome = "felipe";
+    this.nome = "Guilherme";
   }
+
+  chamarNome(){
+    return(<Text>{this.nome}</Text>)
+}
 
   render(){
     return(
       <View>
-        {this.body.chamarNome()}
+        {this.chamarNome()}
       </View>
     );
   }
